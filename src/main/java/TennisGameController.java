@@ -81,10 +81,9 @@ public class TennisGameController {
 			return ScoreEnum.THIRTY.name();
 		case 1:
 			return ScoreEnum.FIFTEEN.name();
-		case 0:
+		default:
 			return ScoreEnum.LOVE.name();
 		}
-		return value.toString();
 	}
 
 }
