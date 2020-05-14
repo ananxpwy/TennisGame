@@ -22,7 +22,13 @@ public class TennisGameController {
 		}
 	}
 
-	private static Boolean getResult(Player playerOne, Player playerTwo) {
+	/**
+	 * déterminer le résultat de chaque point
+	 * @param playerOne
+	 * @param playerTwo
+	 * @return
+	 */
+	public static Boolean getResult(Player playerOne, Player playerTwo) {
 
 		Integer playerOneScore = playerOne.getScore();
 		Integer playerTwoScore = playerTwo.getScore();
@@ -59,6 +65,11 @@ public class TennisGameController {
 		return (playerOneScore >= 4 || playerTwoScore >= 4) && Math.abs(playerOneScore - playerTwoScore) >= 2;
 	}
 
+	/**
+	 * ajouter un point à un des deux joueurs au hasard
+	 * @param playerOne
+	 * @param playerTwo
+	 */
 	private static void getScore(Player playerOne, Player playerTwo) {
 		Random random = new Random();
 		Boolean isPlayerOneWinPoint = random.nextBoolean();
@@ -73,7 +84,14 @@ public class TennisGameController {
 		return (playerOne.getScore() > playerTwo.getScore()) ? playerOne.getName() : playerTwo.getName();
 	}
 	
-	public static String getScoreName(Integer value) {
+	
+	/**
+	 * Convertir les scores de 0, 1, 2, 3 en "LOVE", "FIFTEEN", "THIRTY" et "FORTY" 
+	 * correspondant à la manière spécifique du tennis
+	 * @param value
+	 * @return
+	 */
+	private static String getScoreName(Integer value) {
 		switch (value) {
 		case 3:
 			return ScoreEnum.FORTY.name();
