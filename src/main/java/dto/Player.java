@@ -6,7 +6,7 @@ public class Player {
 	private Integer score;
 	
 	
-	public Player(String name, Integer score, Boolean flg) {
+	public Player(String name, Integer score) {
 		super();
 		this.name = name;
 		this.score = score;

@@ -12,8 +12,8 @@ public class TennisGameController {
 	private static final String ADVANTAGE = "ADVANTAGE :";
 
 	public static void main(String args[]) {
-		Player playerOne = new Player("PCY", 0, false);
-		Player playerTwo = new Player("OSH", 0, false);
+		Player playerOne = new Player("PCY", 0);
+		Player playerTwo = new Player("OSH", 0);
 		Boolean gameOver = false;
 
 		while (!gameOver) {
